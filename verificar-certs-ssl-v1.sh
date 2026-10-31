@@ -1,6 +1,5 @@
 #!/bin/bash
 # Creado por Gerardo Arévalo Carranza
-# Logicalis México
 # Octubre del 2025
 
 data=$(echo | openssl s_client -servername $1 -connect $1:443 2>/dev/null | openssl x509 -noout -enddate | sed -e 's#notAfter=##')
